@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Globalization;
+using System.Threading;
 using System.Windows;
 
 namespace Endoscopy
@@ -13,5 +9,16 @@ namespace Endoscopy
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            string language = Endoscopy.Properties.Settings.Default.Language.ToLower();
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+
+            MainWindow window = new MainWindow();
+            MainWindow = window;
+            window.Show();
+        }
     }
 }
