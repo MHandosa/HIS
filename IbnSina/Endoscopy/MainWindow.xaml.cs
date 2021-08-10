@@ -14,9 +14,11 @@ namespace Endoscopy
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Owner = this;
-            if(loginWindow.ShowDialog() == true)
+            LoginWindow loginWindow = new()
+            {
+                Owner = this
+            };
+            if (loginWindow.ShowDialog() == true)
             {
 
                 MessageBox.Show("Welcome");

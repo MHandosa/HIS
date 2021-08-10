@@ -22,7 +22,7 @@ namespace Endoscopy {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Endoscopy {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Endoscopy.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Endoscopy {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        internal static string Cancel {
+        public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
             }
@@ -72,16 +72,25 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to Foundation.
         /// </summary>
-        internal static string Foundation {
+        public static string Foundation {
             get {
                 return ResourceManager.GetString("Foundation", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid user name or password.
+        /// </summary>
+        public static string InvalidUserNameOrPassword {
+            get {
+                return ResourceManager.GetString("InvalidUserNameOrPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string Login {
+        public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
             }
@@ -90,7 +99,7 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
-        internal static string New {
+        public static string New {
             get {
                 return ResourceManager.GetString("New", resourceCulture);
             }
@@ -99,7 +108,7 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        internal static string Password {
+        public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
             }
@@ -108,7 +117,7 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to Patient.
         /// </summary>
-        internal static string Patient {
+        public static string Patient {
             get {
                 return ResourceManager.GetString("Patient", resourceCulture);
             }
@@ -117,7 +126,7 @@ namespace Endoscopy {
         /// <summary>
         ///   Looks up a localized string similar to User name.
         /// </summary>
-        internal static string UserName {
+        public static string UserName {
             get {
                 return ResourceManager.GetString("UserName", resourceCulture);
             }

@@ -123,6 +123,9 @@
   <data name="Foundation" xml:space="preserve">
     <value>المؤسسة</value>
   </data>
+  <data name="InvalidUserNameOrPassword" xml:space="preserve">
+    <value>خطأ في اسم المستخدم أو كلمة المرور</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>دخول</value>
   </data>

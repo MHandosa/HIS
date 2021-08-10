@@ -34,5 +34,17 @@ namespace Endoscopy.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("RightToLeft")]
+        public string FlowDirection {
+            get {
+                return ((string)(this["FlowDirection"]));
+            }
+            set {
+                this["FlowDirection"] = value;
+            }
+        }
     }
 }

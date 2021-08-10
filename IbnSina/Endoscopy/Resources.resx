@@ -123,6 +123,9 @@
   <data name="Foundation" xml:space="preserve">
     <value>Foundation</value>
   </data>
+  <data name="InvalidUserNameOrPassword" xml:space="preserve">
+    <value>Invalid user name or password</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>

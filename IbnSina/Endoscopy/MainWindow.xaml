@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Endoscopy"
+        xmlns:properties="clr-namespace:Endoscopy.Properties"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         Title="IbnSina Endoscopy" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800" Height="450" Width="800">
-    <Grid>
-
+    <Grid FlowDirection="{Binding Source={x:Static properties:Settings.Default}, Path=FlowDirection}">
+        
     </Grid>
 </Window>
