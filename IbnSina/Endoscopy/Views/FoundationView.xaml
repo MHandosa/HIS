@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Endoscopy.Views.FoundationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Endoscopy.Views"
+             xmlns:resx="clr-namespace:Endoscopy"
+             xmlns:viewmodels="clr-namespace:Endoscopy.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:FoundationViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBox Name="FilterTextBox" Text="{Binding Path=FilterText, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock IsHitTestVisible="False" Text="{x:Static resx:Resources.Search}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkGray">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=FilterTextBox}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+        <ListView x:Name="ListView" Grid.Row="1" Margin="0,10,0,0" ItemsSource="{Binding Path=Foundations}"/>
+    </Grid>
+</UserControl>

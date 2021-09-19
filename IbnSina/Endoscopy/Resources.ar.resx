@@ -132,11 +132,17 @@
   <data name="New" xml:space="preserve">
     <value>جديد</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>موافق</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
   </data>
   <data name="Patient" xml:space="preserve">
     <value>المريض</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>اسم المستخدم</value>

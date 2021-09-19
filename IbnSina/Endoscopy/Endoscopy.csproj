@@ -8,6 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\Camera.png" />
+    <None Remove="Icons\Edit.png" />
+    <None Remove="Icons\Filter.png" />
+    <None Remove="Icons\Foundation.png" />
+    <None Remove="Icons\Patient.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\Camera.png" />
+    <Resource Include="Icons\Edit.png" />
+    <Resource Include="Icons\Filter.png" />
+    <Resource Include="Icons\Foundation.png" />
+    <Resource Include="Icons\Patient.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

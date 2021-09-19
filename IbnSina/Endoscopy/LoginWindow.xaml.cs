@@ -10,6 +10,9 @@ namespace Endoscopy
         public LoginWindow()
         {
             InitializeComponent();
+
+            UserNameTextBox.Text = "Handosa";
+            PasswordPasswordBox.Password = "123";
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

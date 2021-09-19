@@ -132,11 +132,17 @@
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="Patient" xml:space="preserve">
     <value>Patient</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>User name</value>
