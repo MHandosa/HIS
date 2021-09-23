@@ -15,7 +15,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBox Name="FilterTextBox" Text="{Binding Path=FilterText, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Name="FilterTextBox" Padding="10" Text="{Binding Path=FilterText, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock IsHitTestVisible="False" Text="{x:Static resx:Resources.Search}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkGray">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">

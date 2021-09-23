@@ -23,8 +23,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Button Name="OkButton" Grid.Column="1" Margin="10" Width="100" IsDefault="True" Content="{x:Static local:Resources.Ok}" Click="OkButton_Click"/>
-            <Button Grid.Column="2" Margin="10" Width="100" IsCancel="True" Content="{x:Static local:Resources.Cancel}"/>
+            <Button Name="OkButton" Grid.Column="1" Margin="10" Padding="10" Width="100" IsDefault="True" Content="{x:Static local:Resources.Ok}" Click="OkButton_Click"/>
+            <Button Grid.Column="2" Margin="10" Padding="10" Width="100" IsCancel="True" Content="{x:Static local:Resources.Cancel}"/>
         </Grid>
     </Grid>
 </Window>

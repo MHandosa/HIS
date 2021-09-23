@@ -49,14 +49,13 @@ namespace Endoscopy
             {
                 FoundationModel foundation = foundationsWindow.SelectedFoundation;
 
-                if (_currentFoundation != foundation)
-                {
-                    _currentPatient = null;
-                    _currentFoundation = foundation;
-                    FoundationTextBox.Text = _currentFoundation.ToString();
+                _currentPatient = null;
+                PatientTextBox.Text = null;
 
-                    UpdateUI();
-                }
+                _currentFoundation = foundation;
+                FoundationTextBox.Text = _currentFoundation.ToString();
+
+                UpdateUI();
             }
         }
 
@@ -71,13 +70,10 @@ namespace Endoscopy
             {
                 PatientModel patient = patientsWindow.SelectedPatient;
 
-                if (_currentPatient != patient)
-                {
-                    _currentPatient = patient;
-                    PatientTextBox.Text = _currentPatient.ToString();
+                _currentPatient = patient;
+                PatientTextBox.Text = _currentPatient.ToString();
 
-                    UpdateUI();
-                }
+                UpdateUI();
             }
         }
 
