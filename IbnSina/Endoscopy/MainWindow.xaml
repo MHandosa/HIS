@@ -11,7 +11,8 @@
         FontSize="20"
         Loaded="Window_Loaded"
         WindowState="Maximized"
-        Title="IbnSina Endoscopy" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen" 
+        Title="IbnSina Endoscopy" MinHeight="450" MinWidth="800" Height="450" Width="800">
     <Grid FlowDirection="{Binding Source={x:Static properties:Settings.Default}, Path=FlowDirection}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

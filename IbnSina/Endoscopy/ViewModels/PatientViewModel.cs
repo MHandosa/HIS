@@ -58,7 +58,7 @@ namespace Endoscopy.ViewModels
             }
         }
 
-        public void LoadPatients(FoundationModel foundation)
+        public void Load(FoundationModel foundation)
         {
             _patients.Clear();
 

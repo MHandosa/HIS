@@ -8,6 +8,7 @@
         xmlns:properties="clr-namespace:Endoscopy.Properties"
         mc:Ignorable="d"
         FontSize="20"
+        ShowInTaskbar="False"
         FlowDirection="{Binding Source={x:Static properties:Settings.Default}, Path=FlowDirection}"
         Title="Login" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" WindowStyle="None">
     <Grid>

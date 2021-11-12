@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} - {1} ", Id, Name);
+            return string.Format("{0} \t {1} ", Id, Name);
         }
     }
 }

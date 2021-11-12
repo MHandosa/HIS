@@ -24,7 +24,7 @@ namespace Endoscopy
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _foundationViewModel.LoadFoundations();
+            _foundationViewModel.Load();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
