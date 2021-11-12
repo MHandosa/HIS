@@ -29,7 +29,10 @@ namespace Endoscopy
 
         public static string GetUserDisplayName()
         {
-            if (_userId == null) throw new AuthenticationException();
+            if (_userId == null)
+            {
+                throw new AuthenticationException();
+            }
 
             return "محمد حسين حافظ حندوسة";
         }
@@ -89,6 +92,55 @@ namespace Endoscopy
             };
 
             return patients;
+        }
+
+        public static List<SessionModel> GetSessions(PatientModel patient)
+        {
+            if (_userId == null)
+            {
+                throw new AuthenticationException();
+            }
+
+            if (patient == null)
+            {
+                throw new ArgumentNullException(nameof(patient));
+            }
+
+            List<SessionModel> sessions = new()
+            {
+                new SessionModel("1", DateTime.Now),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(20, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(25, 0, 0, 0))),
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(30, 0, 0, 0))),
+                
+                new SessionModel("1", DateTime.Now.Subtract(new TimeSpan(35, 0, 0, 0)))
+            };
+
+            return sessions;
         }
     }
 }

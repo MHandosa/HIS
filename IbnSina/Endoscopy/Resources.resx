@@ -120,6 +120,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Copyright © CITC</value>
+  </data>
   <data name="Foundation" xml:space="preserve">
     <value>Foundation</value>
   </data>

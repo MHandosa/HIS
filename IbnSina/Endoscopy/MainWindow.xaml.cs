@@ -1,4 +1,5 @@
 ﻿using Endoscopy.Models;
+using Endoscopy.ViewModels;
 using System.Windows;
 
 namespace Endoscopy
@@ -10,6 +11,7 @@ namespace Endoscopy
     {
         private PatientModel _currentPatient;
         private FoundationModel _currentFoundation;
+        private SessionViewModel _sessionViewModel;
 
         public MainWindow()
         {
@@ -17,6 +19,8 @@ namespace Endoscopy
 
             _currentPatient = null;
             _currentFoundation = null;
+            _sessionViewModel = new SessionViewModel();
+            SessionView.DataContext = _sessionViewModel;
 
             UpdateUI();
         }
@@ -30,7 +34,7 @@ namespace Endoscopy
             
             if (loginWindow.ShowDialog() == true)
             {
-                Title += " (" + API.GetUserDisplayName() + ")";
+                Title += " - " + API.GetUserDisplayName();
             }
             else
             {
@@ -47,13 +51,13 @@ namespace Endoscopy
 
             if (foundationsWindow.ShowDialog() == true)
             {
-                FoundationModel foundation = foundationsWindow.SelectedFoundation;
+                _currentFoundation = foundationsWindow.SelectedFoundation;
+                FoundationTextBox.Text = _currentFoundation.ToString();
 
                 _currentPatient = null;
                 PatientTextBox.Text = null;
 
-                _currentFoundation = foundation;
-                FoundationTextBox.Text = _currentFoundation.ToString();
+                _sessionViewModel.Clear();
 
                 UpdateUI();
             }
@@ -68,10 +72,10 @@ namespace Endoscopy
 
             if (patientsWindow.ShowDialog() == true)
             {
-                PatientModel patient = patientsWindow.SelectedPatient;
-
-                _currentPatient = patient;
+                _currentPatient = patientsWindow.SelectedPatient;
                 PatientTextBox.Text = _currentPatient.ToString();
+
+                _sessionViewModel.Load(_currentPatient);
 
                 UpdateUI();
             }

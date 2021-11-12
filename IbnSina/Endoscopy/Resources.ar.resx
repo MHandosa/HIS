@@ -120,6 +120,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
+  <data name="Footer" xml:space="preserve">
+    <value>جميع الحقوق محفوظة © مركز تقنية الاتصالات والمعلومات</value>
+  </data>
   <data name="Foundation" xml:space="preserve">
     <value>المؤسسة</value>
   </data>

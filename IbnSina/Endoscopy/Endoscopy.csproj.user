@@ -22,6 +22,9 @@
     <Compile Update="Views\PatientView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SessionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="FoundationsWindow.xaml">
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PatientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SessionView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
