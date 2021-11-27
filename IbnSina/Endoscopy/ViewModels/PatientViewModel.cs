@@ -1,4 +1,5 @@
 ﻿using Endoscopy.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,15 +7,23 @@ using System.Windows.Data;
 
 namespace Endoscopy.ViewModels
 {
-    class PatientViewModel
+    class PatientViewModel :INotifyPropertyChanged
     {
         private string _filterText;
         private readonly CollectionViewSource _patientsViewSource;
         private readonly ObservableCollection<PatientModel> _patients;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        public PatientModel SelectedPatient { get; private set; }
+
+        public DelegateCommand SelectPatient { get; private set; }
+        public DelegateCommand<FoundationModel> ListPatients { get; private set; }
+
         public PatientViewModel()
         {
             _patients = new ObservableCollection<PatientModel>();
+            SelectPatient = new DelegateCommand(OnSelectPatient, CanSelectPatient);
+            ListPatients = new DelegateCommand<FoundationModel>(OnListPatients, CanListPatients);
 
             _patientsViewSource = new CollectionViewSource
             {
@@ -24,12 +33,57 @@ namespace Endoscopy.ViewModels
             _patientsViewSource.Filter += Filter;
         }
 
+        protected void RaisePropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
+
+        public void Clear()
+        {
+            _patients.Clear();
+            SelectedPatient = null;
+            RaisePropertyChanged(nameof(SelectedPatient));
+        }
+
+        public void Load(FoundationModel foundation)
+        {
+            _patients.Clear();
+
+            List<PatientModel> patients = API.GetPatients(foundation);
+
+            foreach (PatientModel patient in patients)
+            {
+                _patients.Add(patient);
+            }
+        }
+
         public ICollectionView Patients
         {
             get
             {
                 return _patientsViewSource.View;
             }
+        }
+
+        public bool CanSelectPatient()
+        {
+            return _patientsViewSource.View.CurrentItem != null;
+        }
+
+        public void OnSelectPatient()
+        {
+            SelectedPatient = _patientsViewSource.View.CurrentItem as PatientModel;
+            RaisePropertyChanged(nameof(SelectedPatient));
+        }
+
+        private bool CanListPatients(FoundationModel selectedFoundation)
+        {
+            return selectedFoundation != null;
+        }
+
+        private void OnListPatients(FoundationModel selectedFoundation)
+        {
+            // Just a placeholder
         }
 
         public string FilterText
@@ -55,18 +109,6 @@ namespace Endoscopy.ViewModels
             {
                 PatientModel patient = e.Item as PatientModel;
                 e.Accepted = patient.ToString().ToUpper().Contains(FilterText.ToUpper());
-            }
-        }
-
-        public void Load(FoundationModel foundation)
-        {
-            _patients.Clear();
-
-            List<PatientModel> patients = API.GetPatients(foundation);
-
-            foreach (PatientModel patient in patients)
-            {
-                _patients.Add(patient);
             }
         }
     }

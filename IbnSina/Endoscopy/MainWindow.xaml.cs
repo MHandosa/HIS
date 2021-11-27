@@ -9,20 +9,23 @@ namespace Endoscopy
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PatientModel _currentPatient;
-        private FoundationModel _currentFoundation;
-        private SessionViewModel _sessionViewModel;
+        private readonly SessionViewModel _sessionViewModel;
+        private readonly PatientViewModel _patientViewModel;
+        private readonly FoundationViewModel _foundationViewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            _currentPatient = null;
-            _currentFoundation = null;
+            
             _sessionViewModel = new SessionViewModel();
-            SessionView.DataContext = _sessionViewModel;
+            _patientViewModel = new PatientViewModel();
+            _foundationViewModel = new FoundationViewModel();
 
-            UpdateUI();
+            SessionView.DataContext = _sessionViewModel;
+            PatientTextBox.DataContext = _patientViewModel;
+            PatientsButton.DataContext = _patientViewModel;
+            FoundationTextBox.DataContext = _foundationViewModel;
+            FoundationsButton.DataContext = _foundationViewModel;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -44,46 +47,27 @@ namespace Endoscopy
 
         private void FoundationsButton_Click(object sender, RoutedEventArgs e)
         {
-            FoundationsWindow foundationsWindow = new()
-            {
-                Owner = this
-            };
+            _foundationViewModel.Load();
+
+            FoundationsWindow foundationsWindow = new(this, _foundationViewModel);
 
             if (foundationsWindow.ShowDialog() == true)
             {
-                _currentFoundation = foundationsWindow.SelectedFoundation;
-                FoundationTextBox.Text = _currentFoundation.ToString();
-
-                _currentPatient = null;
-                PatientTextBox.Text = null;
-
+                _patientViewModel.Clear();
                 _sessionViewModel.Clear();
-
-                UpdateUI();
             }
         }
 
         private void PatientsButton_Click(object sender, RoutedEventArgs e)
         {
-            PatientsWindow patientsWindow = new(_currentFoundation)
-            {
-                Owner = this
-            };
+            _patientViewModel.Load(_foundationViewModel.SelectedFoundation);
+
+            PatientsWindow patientsWindow = new(this, _patientViewModel);
 
             if (patientsWindow.ShowDialog() == true)
             {
-                _currentPatient = patientsWindow.SelectedPatient;
-                PatientTextBox.Text = _currentPatient.ToString();
-
-                _sessionViewModel.Load(_currentPatient);
-
-                UpdateUI();
+                _sessionViewModel.Load(_patientViewModel.SelectedPatient);
             }
-        }
-
-        private void UpdateUI()
-        {
-            PatientsButton.IsEnabled = _currentFoundation != null;
         }
     }
 }

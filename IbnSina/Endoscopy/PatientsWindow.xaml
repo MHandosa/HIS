@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:Endoscopy"
         xmlns:views="clr-namespace:Endoscopy.Views"
         xmlns:properties="clr-namespace:Endoscopy.Properties"
+        xmlns:viewmodels="clr-namespace:Endoscopy.ViewModels"
         mc:Ignorable="d"
-        Loaded="Window_Loaded"
+        d:DataContext="{d:DesignInstance Type=viewmodels:PatientViewModel}"
         FontSize="20"
         WindowStyle="None"
         Title="Patients"
@@ -29,7 +30,7 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Button Name="OkButton" Grid.Column="1" Margin="10" Padding="10" Width="100" IsDefault="True" Content="{x:Static local:Resources.Ok}" Click="OkButton_Click"/>
+                <Button Name="OkButton" Grid.Column="1" Margin="10" Padding="10" Width="100" IsDefault="True" Content="{x:Static local:Resources.Ok}" Command="{Binding SelectPatient}" Click="OkButton_Click"/>
                 <Button Grid.Column="2" Margin="10" Padding="10" Width="100" IsCancel="True" Content="{x:Static local:Resources.Cancel}"/>
             </Grid>
         </Grid>

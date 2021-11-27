@@ -11,39 +11,16 @@ namespace Endoscopy
     /// </summary>
     public partial class PatientsWindow : Window
     {
-        private readonly FoundationModel _foundationModel;
-        private readonly PatientViewModel _patientViewModel;
-
-        public PatientModel SelectedPatient { get; private set; }
-        public PatientsWindow(FoundationModel foundationModel)
+        internal PatientsWindow(Window owner, PatientViewModel patientViewModel)
         {
             InitializeComponent();
-            _foundationModel = foundationModel;
-            _patientViewModel = new PatientViewModel();
-            PatientView.DataContext = _patientViewModel;
-            PatientView.ListView.SelectionChanged += ListView_SelectionChanged;
-            UpdateUI();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            _patientViewModel.Load(_foundationModel);
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            UpdateUI();
+            Owner = owner;
+            DataContext = patientViewModel;
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            SelectedPatient = PatientView.ListView.SelectedItem as PatientModel;
             DialogResult = true;
-        }
-
-        private void UpdateUI()
-        {
-            OkButton.IsEnabled = PatientView.ListView.SelectedItem != null;
         }
     }
 }

@@ -13,6 +13,7 @@
     <None Remove="Icons\Filter.png" />
     <None Remove="Icons\Foundation.png" />
     <None Remove="Icons\Patient.png" />
+    <None Remove="Icons\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
     <Resource Include="Icons\Filter.png" />
     <Resource Include="Icons\Foundation.png" />
     <Resource Include="Icons\Patient.png" />
+    <Resource Include="Icons\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
