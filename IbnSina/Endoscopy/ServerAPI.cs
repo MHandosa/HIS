@@ -5,11 +5,11 @@ using System.Security.Authentication;
 
 namespace Endoscopy
 {
-    internal static class API
+    internal static class ServerAPI
     {
         private static string _userId;
 
-        static API()
+        static ServerAPI()
         {
             _userId = null;
         }
@@ -80,15 +80,15 @@ namespace Endoscopy
 
             List<PatientModel> patients = new()
             {
-                new PatientModel("1", "محمد إبراهيم وجدي عبد الله"),
-                new PatientModel("2", "سامية عثمان عبدالكريم المرشدي"),
-                new PatientModel("3", "سمير محمود حافظ محمدين"),
-                new PatientModel("1", "محمد إبراهيم وجدي عبد الله"),
-                new PatientModel("2", "سامية عثمان عبدالكريم المرشدي"),
-                new PatientModel("3", "سمير محمود حافظ محمدين"),
-                new PatientModel("1", "محمد إبراهيم وجدي عبد الله"),
-                new PatientModel("2", "سامية عثمان عبدالكريم المرشدي"),
-                new PatientModel("3", "سمير محمود حافظ محمدين")
+                new PatientModel("16574898763267", "محمد إبراهيم وجدي عبد الله"),
+                new PatientModel("27837658947638", "سامية عثمان عبدالكريم المرشدي"),
+                new PatientModel("33821378921371", "سمير محمود حافظ محمدين"),
+                new PatientModel("13498349834802", "محمد إبراهيم وجدي عبد الله"),
+                new PatientModel("28371237129382", "سامية عثمان عبدالكريم المرشدي"),
+                new PatientModel("32932139128302", "سمير محمود حافظ محمدين"),
+                new PatientModel("13243248348023", "محمد إبراهيم وجدي عبد الله"),
+                new PatientModel("22342342345435", "سامية عثمان عبدالكريم المرشدي"),
+                new PatientModel("35675674566454", "سمير محمود حافظ محمدين")
             };
 
             return patients;

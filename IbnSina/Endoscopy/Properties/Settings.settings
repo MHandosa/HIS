@@ -8,5 +8,20 @@
     <Setting Name="FlowDirection" Type="System.String" Scope="User">
       <Value Profile="(Default)">RightToLeft</Value>
     </Setting>
+    <Setting Name="ServerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://ibnsina.mans.edu.eg/</Value>
+    </Setting>
+    <Setting Name="DeviceAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DevicePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DeviceUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DevicePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

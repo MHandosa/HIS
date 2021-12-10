@@ -16,7 +16,7 @@ namespace Endoscopy
             Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
 
-            MainWindow window = new MainWindow();
+            MainWindow window = new();
             MainWindow = window;
             window.Show();
         }

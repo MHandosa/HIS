@@ -21,25 +21,34 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.UserName}, StringFormat={}{0}:}"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Password}, StringFormat={}{0}:}"/>
-            <TextBox Name="UserNameTextBox" Grid.Row="0" Grid.Column="1" Margin="10" Padding="10" Width="300" TextChanged="UserNameTextBox_TextChanged"/>
-            <PasswordBox Name="PasswordPasswordBox" Grid.Row="1" Grid.Column="1" Margin="10" Padding="10" Width="300" PasswordChanged="PasswordPasswordBox_PasswordChanged"/>
+            <TextBlock Name="ServerTextBlock" Grid.Row="0" Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.ServerAddress}, StringFormat={}{0}:}"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.UserName}, StringFormat={}{0}:}"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Password}, StringFormat={}{0}:}"/>
+            <TextBox Name="ServerTextBox" Grid.Row="0" Grid.Column="1" Margin="10" Padding="10" FlowDirection="LeftToRight" Width="300" TextChanged="ServerTextBox_TextChanged"/>
+            <TextBox Name="UserNameTextBox" Grid.Row="1" Grid.Column="1" Margin="10" Padding="10" Width="300" TextChanged="UserNameTextBox_TextChanged"/>
+            <PasswordBox Name="PasswordPasswordBox" Grid.Row="2" Grid.Column="1" Margin="10" Padding="10" Width="300" PasswordChanged="PasswordPasswordBox_PasswordChanged"/>
         </Grid>
         <TextBlock Name="ErrorTextBlock" Grid.Row="1" Margin="10" Visibility="Collapsed" Foreground="Red" Text="{x:Static local:Resources.InvalidUserNameOrPassword}"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Button Name="LoginButton" Grid.Column="1" Margin="10" Padding="10" Width="100" IsDefault="True" Content="{x:Static resx:Resources.Login}" Click="LoginButton_Click"/>
-            <Button Grid.Column="2" Margin="10" Padding="10" Width="100" IsCancel="True" Content="{x:Static resx:Resources.Cancel}"/>
+            <ToggleButton Name="ServerToggleButton" Grid.Column="0" Margin="10" Padding="5" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" Checked="ServerToggleButton_Checked" Unchecked="ServerToggleButton_Unchecked">
+                <Image Source="Icons\server.png"/>
+            </ToggleButton>
+            <Button Name="CultureButton" Grid.Column="1" Margin="10" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" Click="CultureButton_Click"/>
+            <Button Name="LoginButton" Grid.Column="3" Margin="10" Padding="10" Width="100" IsDefault="True" Content="{x:Static resx:Resources.Login}" Click="LoginButton_Click"/>
+            <Button Grid.Column="4" Margin="10" Padding="10" Width="100" IsCancel="True" Content="{x:Static resx:Resources.Cancel}"/>
         </Grid>
     </Grid>
 </Window>

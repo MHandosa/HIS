@@ -46,7 +46,7 @@ namespace Endoscopy.ViewModels
         {
             _foundations.Clear();
 
-            List<FoundationModel> foundations = API.GetFoundations();
+            List<FoundationModel> foundations = ServerAPI.GetFoundations();
 
             foreach (FoundationModel foundation in foundations)
             {

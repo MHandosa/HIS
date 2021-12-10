@@ -38,7 +38,7 @@ namespace Endoscopy.ViewModels
         {
             _sessions.Clear();
 
-            List<SessionModel> sessions = API.GetSessions(patient);
+            List<SessionModel> sessions = ServerAPI.GetSessions(patient);
 
             foreach (SessionModel session in sessions)
             {

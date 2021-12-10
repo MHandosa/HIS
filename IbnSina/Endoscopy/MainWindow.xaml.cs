@@ -1,5 +1,4 @@
-﻿using Endoscopy.Models;
-using Endoscopy.ViewModels;
+﻿using Endoscopy.ViewModels;
 using System.Windows;
 
 namespace Endoscopy
@@ -37,7 +36,7 @@ namespace Endoscopy
             
             if (loginWindow.ShowDialog() == true)
             {
-                Title += " - " + API.GetUserDisplayName();
+                Title += " - " + ServerAPI.GetUserDisplayName();
             }
             else
             {
@@ -68,6 +67,11 @@ namespace Endoscopy
             {
                 _sessionViewModel.Load(_patientViewModel.SelectedPatient);
             }
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            new SettingsWindow(this).ShowDialog();
         }
     }
 }

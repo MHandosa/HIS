@@ -151,6 +151,15 @@ namespace Endoscopy {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Server address.
+        /// </summary>
+        public static string ServerAddress {
+            get {
+                return ResourceManager.GetString("ServerAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User name.
         /// </summary>
         public static string UserName {

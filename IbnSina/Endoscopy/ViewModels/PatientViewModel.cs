@@ -49,7 +49,7 @@ namespace Endoscopy.ViewModels
         {
             _patients.Clear();
 
-            List<PatientModel> patients = API.GetPatients(foundation);
+            List<PatientModel> patients = ServerAPI.GetPatients(foundation);
 
             foreach (PatientModel patient in patients)
             {

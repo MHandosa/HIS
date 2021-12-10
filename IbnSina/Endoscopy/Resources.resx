@@ -147,6 +147,9 @@
   <data name="Search" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="ServerAddress" xml:space="preserve">
+    <value>Server address</value>
+  </data>
   <data name="UserName" xml:space="preserve">
     <value>User name</value>
   </data>

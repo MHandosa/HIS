@@ -2,26 +2,28 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Icons\Camera.png" />
-    <None Remove="Icons\Edit.png" />
-    <None Remove="Icons\Filter.png" />
     <None Remove="Icons\Foundation.png" />
     <None Remove="Icons\Patient.png" />
+    <None Remove="Icons\Server.png" />
     <None Remove="Icons\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hikvision.DeviceNetwork" Version="6.0.25" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Icons\Camera.png" />
-    <Resource Include="Icons\Edit.png" />
-    <Resource Include="Icons\Filter.png" />
     <Resource Include="Icons\Foundation.png" />
     <Resource Include="Icons\Patient.png" />
+    <Resource Include="Icons\Server.png" />
     <Resource Include="Icons\Settings.png" />
   </ItemGroup>
 
