@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Camera" xml:space="preserve">
+    <value>كاميرا</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
   <data name="Footer" xml:space="preserve">
-    <value>جميع الحقوق محفوظة © مركز تقنية الاتصالات والمعلومات</value>
+    <value>جميع الحقوق محفوظة © مركز تقنية الاتصالات والمعلومات 2022</value>
+  </data>
+  <data name="FootPedal" xml:space="preserve">
+    <value>دواسة القدم</value>
   </data>
   <data name="Foundation" xml:space="preserve">
     <value>المؤسسة</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="Login" xml:space="preserve">
     <value>دخول</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
   </data>
   <data name="New" xml:space="preserve">
     <value>جديد</value>
@@ -143,6 +152,9 @@
   </data>
   <data name="Patient" xml:space="preserve">
     <value>المريض</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>المنفذ</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>بحث</value>

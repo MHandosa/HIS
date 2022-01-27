@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Hikvision.DeviceNetwork" Version="6.0.25" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -61,6 +61,15 @@ namespace Endoscopy {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Camera.
+        /// </summary>
+        public static string Camera {
+            get {
+                return ResourceManager.GetString("Camera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
@@ -70,11 +79,20 @@ namespace Endoscopy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copyright © CITC.
+        ///   Looks up a localized string similar to Copyright © CITC 2022.
         /// </summary>
         public static string Footer {
             get {
                 return ResourceManager.GetString("Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foot pedal.
+        /// </summary>
+        public static string FootPedal {
+            get {
+                return ResourceManager.GetString("FootPedal", resourceCulture);
             }
         }
         
@@ -102,6 +120,15 @@ namespace Endoscopy {
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
@@ -138,6 +165,15 @@ namespace Endoscopy {
         public static string Patient {
             get {
                 return ResourceManager.GetString("Patient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Port.
+        /// </summary>
+        public static string Port {
+            get {
+                return ResourceManager.GetString("Port", resourceCulture);
             }
         }
         

@@ -20,6 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
@@ -30,12 +31,60 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <local:EndoscopySettingsUserControl Grid.Row="0" Grid.Column="0" Margin="10" Width="300"/>
-                <local:EndoscopySettingsUserControl Grid.Row="0" Grid.Column="1" Margin="10" Width="300"/>
-                <local:EndoscopySettingsUserControl Grid.Row="1" Grid.Column="0" Margin="10" Width="300"/>
-                <local:EndoscopySettingsUserControl Grid.Row="1" Grid.Column="1" Margin="10" Width="300"/>
+                <GroupBox Grid.Row="0" Grid.Column="0" Margin="10" HeaderStringFormat="{}{0} 1" Header="{x:Static resx:Resources.Camera}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Name}, StringFormat={}{0}:}"/>
+                        <TextBox Grid.Column="1" Margin="10" Padding="10" Width="300" Name="camera1TextBox"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="0" Grid.Column="1" Margin="10" HeaderStringFormat="{}{0} 2" Header="{x:Static resx:Resources.Camera}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Name}, StringFormat={}{0}:}"/>
+                        <TextBox Grid.Column="1" Margin="10" Padding="10" Width="300" Name="camera2TextBox"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Grid.Column="0" Margin="10" HeaderStringFormat="{}{0} 3" Header="{x:Static resx:Resources.Camera}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Name}, StringFormat={}{0}:}"/>
+                        <TextBox Grid.Column="1" Margin="10" Padding="10" Width="300" Name="camera3TextBox"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Grid.Column="1" Margin="10" HeaderStringFormat="{}{0} 4" Header="{x:Static resx:Resources.Camera}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Name}, StringFormat={}{0}:}"/>
+                        <TextBox Grid.Column="1" Margin="10" Padding="10" Width="300" Name="camera4TextBox"/>
+                    </Grid>
+                </GroupBox>
             </Grid>
             <Grid Grid.Row="1">
+                <GroupBox Margin="10" Header="{x:Static resx:Resources.FootPedal}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="10" VerticalAlignment="Center" Text="{Binding Source={x:Static resx:Resources.Port}, StringFormat={}{0}:}"/>
+                        <ComboBox Grid.Column="1" Margin="10" Padding="10" Name="SerialPortNameComboBox"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>

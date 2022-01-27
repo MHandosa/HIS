@@ -25,7 +25,7 @@ namespace Endoscopy.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("AR")]
+        [global::System.Configuration.DefaultSettingValueAttribute("EN")]
         public string Language {
             get {
                 return ((string)(this["Language"]));
@@ -37,7 +37,7 @@ namespace Endoscopy.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("RightToLeft")]
+        [global::System.Configuration.DefaultSettingValueAttribute("LeftToRight")]
         public string FlowDirection {
             get {
                 return ((string)(this["FlowDirection"]));
@@ -104,6 +104,66 @@ namespace Endoscopy.Properties {
             }
             set {
                 this["DevicePassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Camera1Name {
+            get {
+                return ((string)(this["Camera1Name"]));
+            }
+            set {
+                this["Camera1Name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Camera2Name {
+            get {
+                return ((string)(this["Camera2Name"]));
+            }
+            set {
+                this["Camera2Name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Camera3Name {
+            get {
+                return ((string)(this["Camera3Name"]));
+            }
+            set {
+                this["Camera3Name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Camera4Name {
+            get {
+                return ((string)(this["Camera4Name"]));
+            }
+            set {
+                this["Camera4Name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FootPedalPort {
+            get {
+                return ((string)(this["FootPedalPort"]));
+            }
+            set {
+                this["FootPedalPort"] = value;
             }
         }
     }

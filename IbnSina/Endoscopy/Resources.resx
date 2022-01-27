@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Camera" xml:space="preserve">
+    <value>Camera</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="Footer" xml:space="preserve">
-    <value>Copyright © CITC</value>
+    <value>Copyright © CITC 2022</value>
+  </data>
+  <data name="FootPedal" xml:space="preserve">
+    <value>Foot pedal</value>
   </data>
   <data name="Foundation" xml:space="preserve">
     <value>Foundation</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="New" xml:space="preserve">
     <value>New</value>
@@ -143,6 +152,9 @@
   </data>
   <data name="Patient" xml:space="preserve">
     <value>Patient</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>

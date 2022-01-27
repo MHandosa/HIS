@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">AR</Value>
+      <Value Profile="(Default)">EN</Value>
     </Setting>
     <Setting Name="FlowDirection" Type="System.String" Scope="User">
-      <Value Profile="(Default)">RightToLeft</Value>
+      <Value Profile="(Default)">LeftToRight</Value>
     </Setting>
     <Setting Name="ServerAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://ibnsina.mans.edu.eg/</Value>
@@ -21,6 +21,21 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="DevicePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera1Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera2Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera3Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Camera4Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FootPedalPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
