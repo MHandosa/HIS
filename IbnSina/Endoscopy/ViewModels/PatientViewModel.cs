@@ -1,4 +1,5 @@
-﻿using Endoscopy.Models;
+﻿using Endoscopy.API;
+using Endoscopy.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,7 +50,7 @@ namespace Endoscopy.ViewModels
         {
             _patients.Clear();
 
-            List<PatientModel> patients = ServerAPI.GetPatients(foundation);
+            List<PatientModel> patients = Server.GetPatients(foundation);
 
             foreach (PatientModel patient in patients)
             {

@@ -1,4 +1,5 @@
-﻿using Endoscopy.ViewModels;
+﻿using Endoscopy.API;
+using Endoscopy.ViewModels;
 using System.Windows;
 
 namespace Endoscopy
@@ -36,7 +37,7 @@ namespace Endoscopy
             
             if (loginWindow.ShowDialog() == true)
             {
-                Title += " - " + ServerAPI.GetUserDisplayName();
+                Title += " - " + Server.GetUserDisplayName();
             }
             else
             {

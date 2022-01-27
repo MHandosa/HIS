@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Endoscopy.API;
+using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,7 +36,7 @@ namespace Endoscopy
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ServerAPI.Login(UserNameTextBox.Text, PasswordPasswordBox.Password))
+            if (Server.Login(UserNameTextBox.Text, PasswordPasswordBox.Password))
             {
                 Properties.Settings.Default.ServerAddress = ServerTextBox.Text;
                 Properties.Settings.Default.Save();

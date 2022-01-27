@@ -1,4 +1,5 @@
-﻿using Endoscopy.Models;
+﻿using Endoscopy.API;
+using Endoscopy.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -38,7 +39,7 @@ namespace Endoscopy.ViewModels
         {
             _sessions.Clear();
 
-            List<SessionModel> sessions = ServerAPI.GetSessions(patient);
+            List<SessionModel> sessions = Server.GetSessions(patient);
 
             foreach (SessionModel session in sessions)
             {

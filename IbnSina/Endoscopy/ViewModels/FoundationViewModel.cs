@@ -1,4 +1,5 @@
-﻿using Endoscopy.Models;
+﻿using Endoscopy.API;
+using Endoscopy.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -46,7 +47,7 @@ namespace Endoscopy.ViewModels
         {
             _foundations.Clear();
 
-            List<FoundationModel> foundations = ServerAPI.GetFoundations();
+            List<FoundationModel> foundations = Server.GetFoundations();
 
             foreach (FoundationModel foundation in foundations)
             {
